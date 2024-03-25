@@ -3,6 +3,7 @@ package ntu_63133463.cau2_nhietdo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -23,7 +24,28 @@ public class MainActivity extends AppCompatActivity {
         btnFC = findViewById(R.id.btnFC);
         btnclear = findViewById(R.id.btnclear);
         //xu ly click
+        btnCF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                int C = Integer.parseInt(edtC.getText().toString());
+                Double F = C*1.8 + 32;
+                edtF.setText(F+"");
+
+            }
+
+        });
+        btnCF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                int C = Integer.parseInt(edtC.getText().toString());
+                Double F = C*1.8 + 32;
+                edtF.setText(F+"");
+
+            }
+
+        });
         
+
 
     }
 }
