@@ -71,4 +71,12 @@
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnclear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLEAR"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 </LinearLayout>
