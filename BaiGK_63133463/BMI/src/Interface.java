@@ -114,7 +114,7 @@ public class Interface extends JFrame {
 		JButton btnTinh = new JButton("Calculate");
 		btnTinh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				HamTinhToan();
+				
 			}
 		});
 		btnTinh.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -124,7 +124,7 @@ public class Interface extends JFrame {
 		JButton btnXoa = new JButton("Clear");
 		btnXoa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				HamXoa();
+				
 				
 			}
 		});
@@ -148,41 +148,5 @@ public class Interface extends JFrame {
 		lblNewLabel_4.setIcon(new ImageIcon("C:\\Users\\LAP HP\\Downloads\\images.png"));
 		contentPane.add(lblNewLabel_4);
 	}
-	void HamXoa() {
-		txH.setText("");
-		txW.setText("");
-		txKQ.setText("");
-		txKQ.setOpaque(true);
-		txKQ.setBackground(null);
-		
-		
-	}
-	void HamTinhToan() {
-		double h = Double.parseDouble(txH.getText());
-		double w = Double.parseDouble(txW.getText());
-		
-		double bmi = w / (h * h);
-		String cal = String.format("%.2f",bmi);
-		
-		txKQ.setText(cal);
-		if(bmi <= 18.5) {
-			txKQ.setOpaque(true);
-			txKQ.setBackground(Color.blue);
-			
-			
-			
-		}else if(bmi <= 24.5) {
-			txKQ.setOpaque(true);
-			txKQ.setBackground(Color.green);
-			
-		}else if(bmi <= 29.5) {
-			txKQ.setOpaque(true);
-			txKQ.setBackground(Color.orange);
-			
-		}else if(bmi >= 30) {
-			txKQ.setOpaque(true);
-			txKQ.setBackground(Color.red);
-			
-		}
-	}
+	
 }
