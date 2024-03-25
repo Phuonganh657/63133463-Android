@@ -42,7 +42,7 @@ public class body extends JFrame {
 	 */
 	public body() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 601, 369);
+		setBounds(100, 100, 601, 379);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -81,18 +81,8 @@ public class body extends JFrame {
 		panel_1.add(lblNewLabel_3);
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 18));
 		
-		txKQ = new JTextField();
-		txKQ.setBounds(229, 29, 269, 28);
-		panel_1.add(txKQ);
-		txKQ.setColumns(10);
-		
-		txW = new JTextField();
-		txW.setBounds(229, 74, 269, 28);
-		panel_1.add(txW);
-		txW.setColumns(10);
-		
 		txH = new JTextField();
-		txH.setBounds(229, 117, 269, 30);
+		txH.setBounds(229, 32, 269, 30);
 		panel_1.add(txH);
 		txH.setColumns(10);
 		
@@ -126,9 +116,19 @@ public class body extends JFrame {
 		btnThoat.setBounds(451, 158, 89, 23);
 		panel_1.add(btnThoat);
 		
+		txW = new JTextField();
+		txW.setBounds(229, 74, 269, 28);
+		panel_1.add(txW);
+		txW.setColumns(10);
+		
+		txKQ = new JTextField();
+		txKQ.setBounds(229, 118, 269, 28);
+		panel_1.add(txKQ);
+		txKQ.setColumns(10);
+		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setIcon(new ImageIcon("C:\\Users\\LAP HP\\Downloads\\images.png"));
-		lblNewLabel_4.setBounds(10, 247, 573, 88);
+		lblNewLabel_4.setBounds(10, 247, 573, 100);
 		contentPane.add(lblNewLabel_4);
 	}
 	void HamXoa() {
@@ -137,8 +137,37 @@ public class body extends JFrame {
 		txKQ.setText("");
 		txKQ.setOpaque(true);
 		txKQ.setBackground(null);
-	}
-	void HamTinhToan() {
+		
 		
 	}
+	
+	void HamTinhToan() {
+		double h = Double.parseDouble(txH.getText());
+		double w = Double.parseDouble(txW.getText());
+		
+		double bmi = w / (h * h);
+		String cal = String.format("%.2f",bmi);
+		
+		txKQ.setText(cal);
+		if(bmi <= 18.5) {
+			txKQ.setOpaque(true);
+			txKQ.setBackground(Color.blue);
+			
+			
+			
+		}else if(bmi <= 24.5) {
+			txKQ.setOpaque(true);
+			txKQ.setBackground(Color.green);
+			
+		}else if(bmi <= 29.5) {
+			txKQ.setOpaque(true);
+			txKQ.setBackground(Color.orange);
+			
+		}else if(bmi >= 30) {
+			txKQ.setOpaque(true);
+			txKQ.setBackground(Color.red);
+			
+		}
+	}
+	
 }
