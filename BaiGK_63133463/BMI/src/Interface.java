@@ -30,6 +30,9 @@ public class Interface extends JFrame {
 	protected JLabel jTextField_1;
 	protected JLabel jTextField_2;
 	protected JLabel jLabel5;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
 
 	/**
 	 * Launch the application.
@@ -74,24 +77,39 @@ public class Interface extends JFrame {
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(0, 46, 573, 225);
 		panel_1.setBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 0), null));
-		panel_1.setBackground(new Color(128, 255, 255));
+		panel_1.setBackground(new Color(255, 255, 255));
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
 		JLabel lbH = new JLabel("Height(m)");
-		lbH.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lbH.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lbH.setBounds(29, 33, 83, 23);
 		panel_1.add(lbH);
 		
 		JLabel lbW = new JLabel("Weight(kg)");
-		lbW.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lbW.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lbW.setBounds(29, 90, 92, 23);
 		panel_1.add(lbW);
 		
 		JLabel lbB = new JLabel("BMI");
-		lbB.setFont(new Font("Tahoma", Font.BOLD, 16));
-		lbB.setBounds(36, 138, 34, 23);
+		lbB.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lbB.setBounds(40, 142, 34, 23);
 		panel_1.add(lbB);
+		
+		textField = new JTextField();
+		textField.setBounds(160, 31, 334, 31);
+		panel_1.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(160, 88, 334, 31);
+		panel_1.add(textField_1);
+		textField_1.setColumns(10);
+		
+		textField_2 = new JTextField();
+		textField_2.setBounds(160, 138, 334, 31);
+		panel_1.add(textField_2);
+		textField_2.setColumns(10);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setVerticalAlignment(SwingConstants.TOP);
@@ -99,5 +117,4 @@ public class Interface extends JFrame {
 		lblNewLabel_4.setIcon(new ImageIcon("C:\\Users\\LAP HP\\Downloads\\images.png"));
 		contentPane.add(lblNewLabel_4);
 	}
-	
 }
