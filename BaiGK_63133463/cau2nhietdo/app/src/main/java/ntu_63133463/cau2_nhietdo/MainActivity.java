@@ -16,5 +16,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        edtC = findViewById(R.id.edtC);
+        edtF = findViewById(R.id.edtF);
+        btnCF = findViewById(R.id.btnCF);
+        btnFC = findViewById(R.id.btnFC);
+        btnclear = findViewById(R.id.btnclear);
+        //xu ly click
+        
+
     }
 }
