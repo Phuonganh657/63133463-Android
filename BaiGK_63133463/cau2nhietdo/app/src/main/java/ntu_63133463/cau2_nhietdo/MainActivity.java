@@ -32,19 +32,26 @@ public class MainActivity extends AppCompatActivity {
                 edtF.setText(F+"");
 
             }
-
         });
-        btnCF.setOnClickListener(new View.OnClickListener() {
+        btnFC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                int C = Integer.parseInt(edtC.getText().toString());
-                Double F = C*1.8 + 32;
-                edtF.setText(F+"");
-
+                int F = Integer.parseInt(edtC.getText().toString());
+                Double C = (F-32)/1.8;
+                edtC.setText(C+"");
             }
 
         });
-        
+        btnclear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                edtC.setText("");
+                edtF.setText("");
+            }
+        });
+
+
+
 
 
     }
