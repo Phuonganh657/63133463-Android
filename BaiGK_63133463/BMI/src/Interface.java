@@ -21,9 +21,6 @@ public class Interface extends JFrame {
 	private static final long serialVersionUID = 1L;
 	protected static final Component Jlabel5 = null;
 	private JPanel contentPane;
-	private JTextField txH;
-	private JTextField txW;
-	private JTextField txKQ;
 	protected JLabel jTextFieldl;
 	protected JLabel jTextField1;
 	protected JLabel jTextField2;
@@ -95,52 +92,6 @@ public class Interface extends JFrame {
 		lbB.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lbB.setBounds(36, 138, 34, 23);
 		panel_1.add(lbB);
-		
-		txH = new JTextField();
-		txH.setBounds(146, 30, 376, 33);
-		panel_1.add(txH);
-		txH.setColumns(10);
-		
-		txW = new JTextField();
-		txW.setBounds(146, 80, 376, 33);
-		panel_1.add(txW);
-		txW.setColumns(10);
-		
-		txKQ = new JTextField();
-		txKQ.setBounds(146, 128, 190, 33);
-		panel_1.add(txKQ);
-		txKQ.setColumns(10);
-		
-		JButton btnTinh = new JButton("Calculate");
-		btnTinh.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		btnTinh.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		btnTinh.setBounds(61, 172, 89, 42);
-		panel_1.add(btnTinh);
-		
-		JButton btnXoa = new JButton("Clear");
-		btnXoa.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				
-			}
-		});
-		btnXoa.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		btnXoa.setBounds(255, 172, 89, 42);
-		panel_1.add(btnXoa);
-		
-		JButton btnThoat = new JButton("Edit");
-		btnThoat.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
-			}
-		});
-		btnThoat.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		btnThoat.setBounds(453, 172, 89, 42);
-		panel_1.add(btnThoat);
 		
 		JLabel lblNewLabel_4 = new JLabel("");
 		lblNewLabel_4.setVerticalAlignment(SwingConstants.TOP);
