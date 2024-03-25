@@ -10,6 +10,8 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.border.EtchedBorder;
 import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class body extends JFrame {
 
@@ -95,16 +97,31 @@ public class body extends JFrame {
 		txH.setColumns(10);
 		
 		JButton btnTinh = new JButton("Tính");
+		btnTinh.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HamTinhToan();
+			}
+		});
 		btnTinh.setFont(new Font("Tahoma", Font.BOLD, 14));
 		btnTinh.setBounds(69, 158, 89, 23);
 		panel_1.add(btnTinh);
 		
 		JButton btnXoa = new JButton("Xóa");
+		btnXoa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HamXoa();
+			}
+		});
 		btnXoa.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnXoa.setBounds(253, 158, 89, 23);
 		panel_1.add(btnXoa);
 		
 		JButton btnThoat = new JButton("Thoát");
+		btnThoat.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
 		btnThoat.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnThoat.setBounds(451, 158, 89, 23);
 		panel_1.add(btnThoat);
@@ -113,5 +130,15 @@ public class body extends JFrame {
 		lblNewLabel_4.setIcon(new ImageIcon("C:\\Users\\LAP HP\\Downloads\\images.png"));
 		lblNewLabel_4.setBounds(10, 247, 573, 88);
 		contentPane.add(lblNewLabel_4);
+	}
+	void HamXoa() {
+		txH.setText("");
+		txW.setText("");
+		txKQ.setText("");
+		txKQ.setOpaque(true);
+		txKQ.setBackground(null);
+	}
+	void HamTinhToan() {
+		
 	}
 }
